@@ -2,7 +2,7 @@
 This project aims to detect fraudulent transactions in a credit card dataset using autoencoders for anomaly detection and feature extraction, followed by classifiers for binary classification. The project demonstrates an effective approach to handling imbalanced datasets in a semi-supervised learning framework.
 
 ## Dataset
-The dataset used in this project is a publicly available credit card transactions dataset, which contains transactions labeled as fraudulent (Class = 1) or non-fraudulent (Class = 0). The dataset is highly imbalanced, with fraudulent transactions being a very small fraction of the total.
+The dataset used in this project is a publicly available credit card transactions dataset, which contains transactions labeled as fraudulent (Class = 1) or non-fraudulent (Class = 0). The dataset is highly imbalanced, with fraudulent transactions being a very small fraction of the total. The feautures V1 through V28 are principle components from PCA applied to the original transaction data reducing dimensionaltiy and preserving privacy. 
 
 ## Preprocessing
 *  Normalizing and scaling the features using a combination of Normalizer and MinMaxScaler.
@@ -30,8 +30,3 @@ The performance of these classifiers was compared using metrics such as accuracy
 The autoencoder effectively reduced the dimensionality of the data while preserving important patterns for classification. The Logistic Regression and SVM models showed competitive performance, with the SVM model achieving a higher AUC-ROC score.
 <br><br>
 ![download](https://github.com/user-attachments/assets/f93c8c0d-ff7a-4c23-a80e-8513f1d63840)
-
-## Further Improvements 
-*  **Hyperparameter Tuning:** Experiment with different architectures, such as varying the number of layers and neurons, and trying alternative activation functions, optimizers, and learning rate schedules to optimize model performance.
-*  **Data Augmentation:** Use techniques to generate synthetic fraudulent samples, addressing the class imbalance and potentially improving classifier accuracy.
-*  **Model Interpretability:** Implement techniques to increase transparency and understand feature importance in model predictions.
